@@ -151,7 +151,7 @@ class SalesGPT(Chain, BaseModel):
         
     def human_step(self, human_input):
         # process human input
-        human_input = human_input + '<END_OF_TURN>'
+        human_input = f'{human_input}<END_OF_TURN>'
         self.conversation_history.append(human_input)
 
     def step(self):
